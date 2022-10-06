@@ -20,7 +20,7 @@ body{
 }
 
 .navbar-custom {
-    background-color: #3c3b3a;
+    background-color: #dedeea;
     opacity:1;
     backdrop-filter: blur(5px);
     color:#333;
@@ -30,13 +30,14 @@ body{
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color:#ebebeb;
+    color:#78acc1;
     font-weight: 500;
+    font-size: 2rem;
 }
 
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
-    color:#bcc3ad;
+    color:#61678b;
     font-weight: 500;
     margin-left:5px;
     padding-left:15px;
@@ -46,7 +47,7 @@ body{
 }
 
 .navbar-custom .navbar-nav .nav-link:hover {
-    color: #ebebeb;
+    color: #bcb9d8;
 }
 
 /* change the color of active or hovered links
@@ -64,18 +65,18 @@ body{
 
 /* for dropdown only - change the color of droodown */
 .navbar-custom .dropdown-menu {
-    background-color: #ebebeb;
+    background-color: #dedeea;
     border-radius: 10px;
 }
 .navbar-custom .dropdown-item {
-    color: #333;
+    color: #61678b;
     padding-top:10px;
     padding-bottom:5px;
 }
 .navbar-custom .dropdown-item:hover,
 .navbar-custom .dropdown-item:focus {
     color: #ffffff;
-    background-color:#d3826a;
+    background-color:#61678b;
     backdrop-filter: blur(5px);
     font-weight: 500;
 }
@@ -193,7 +194,7 @@ body{
 
 .footer{
     margin-top:3pc;
-    background-color: #f1f1f1;
+    background-color: #61678b;
     color:#333;
     padding-top:4pc;
     padding-bottom: 4pc;
@@ -202,7 +203,7 @@ body{
 }
 
 .footer h4{
-    color:#333;
+    color:#fff;
     font-weight: bold;
 
 }

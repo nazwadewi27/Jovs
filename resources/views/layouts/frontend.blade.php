@@ -20,7 +20,7 @@
     </head>
     <body>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-md navbar-custom shadow-sm py-3 fixed-top">
+        <nav class="navbar navbar-expand-md navbar-custom shadow-sm fixed-top py-0">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}"><b>{{ config('app.name') }}</b></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +63,7 @@
         @php 
             $profil = App\Models\User::where('id', 1)->first();
         @endphp
-        <div class="clearfix  mt-5 pt-4"></div>
+        <div class="clearfix pt-4" style="margin-top: 2rem;"></div>
         <div class="main">
             @yield('content')
         </div>
