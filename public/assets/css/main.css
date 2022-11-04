@@ -86,7 +86,13 @@ body{
     color:#e0160f;
     font-weight: bold;
 }
+.pl-0{
+    padding-left: 0px;
+}
 
+.mb-0{
+    margin-bottom: 0px;
+}
 .blink_me {
     animation: blinker 1s linear infinite;
 }

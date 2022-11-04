@@ -48,13 +48,18 @@
                             @endif
                         
                        
-                            <a class="nav-link active" href="#" 
+                            {{-- <a class="nav-link active" href="#" 
                                 data-bs-toggle="modal" data-bs-target="#ModalSearch" 
                                 tabindex="-1" aria-disabled="true">
                                 <i class="fas fa-search"></i>
-                            </a>
-                        
+                            </a> --}}
                     </ul>
+                    {{-- <ul class="pl-0 mb-0">
+                        <form class="form-inlinemy-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </ul> --}}
                 </div>
             </div>
         </nav>
@@ -72,19 +77,19 @@
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-8">
-                        <h4>Butuh Bantuan</h4>
-                        <p class="pt-2">08:00 - 17:00 WIB / (Senin - Jumat)</p>
-                        <i class="fas fa-envelope-square me-2"></i> {{ $profil->email }}
+                    <div class="col-sm-8 text-white">
+                        <h4 style="color: white">Butuh Bantuan</h4>
+                        <p class="pt-2 text-white">08:00 - 17:00 WIB / (Senin - Jumat)</p>
+                        <i class="fas fa-envelope-square me-2 text-white"></i> {{ $profil->email }}
                         <br>
-                        <i class="fas fa-map-marker-alt me-2"></i> {{ $profil->address }}
+                        <i class="fas fa-map-marker-alt me-2 text-white"></i> {{ $profil->address }}
                         <br><br>
                     </div>
                     <div class="col-sm-4">
                         <h4>Tetap Terhubung Dengan Kami</h4>
-                        <a href="#" class="text-terhubung"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-terhubung"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-terhubung"><i class="fab fa-news"></i></a>
+                        <a href="#" class="text-terhubung text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-terhubung text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-terhubung text-white"><i class="fab fa-news"></i></a>
                     </div>
                 </div>
             </div>
