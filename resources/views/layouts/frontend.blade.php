@@ -42,7 +42,7 @@
                         @endforeach
                         
                             @if(isset(auth()->user()->name))
-                                <a class="nav-link active bg-primary text-white" href="{{ url('admin') }}">Dashboard</a>
+                            <a class="btn text-white" style="background-color: #61678b" href="{{ url('admin') }}">Dashboard</a>
                             @else 
                                 <a class="nav-link active" href="{{ url('login') }}">Login</a>
                             @endif

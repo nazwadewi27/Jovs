@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card card-rounded">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header text-white" style="background-color: #61678b">
                     <h5 class="card-title pt-2">{{ __('Login Admin') }}</h5>
                 </div>
                 <div class="card-body">
@@ -52,7 +52,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn text-white" style="background-color: #61678b">
                                     {{ __('Login') }}
                                 </button>
 

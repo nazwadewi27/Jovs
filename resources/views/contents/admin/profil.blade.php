@@ -6,7 +6,7 @@
         <div class="col-md-6">
             {{ alertbs_form($errors) }}
             <div class="card card-rounded">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header text-white" style="background-color: #61678b">
                     <h5 class="card-title pt-2"> <i class="fas fa-edit me-1"></i> Ubah Profil</h5>
                 </div>
                 <div class="card-body">
@@ -80,7 +80,7 @@
                         </div>
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn text-white" style="background-color: #61678b">
                                     Simpan
                                 </button>
                             </div>
