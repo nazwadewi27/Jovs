@@ -3,11 +3,11 @@
     <div class="container">
         <!-- Button trigger modal -->
         {{ alertbs_form($errors) }}
-        <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#modelIdPlus">
+        <button type="button" class="btn btn-md text-white" style="background-color: #61678b" data-bs-toggle="modal" data-bs-target="#modelIdPlus">
             <i class="fas fa-plus mr-1"></i> Produk
         </button>
         <div class="card card-rounded mt-2">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header text-white" style="background-color: #61678b">
                 <h5 class="card-title pt-2"> <i class="fas fa-database me-1"></i> Data Produk</h5>
             </div>
             <div class="card-body">
