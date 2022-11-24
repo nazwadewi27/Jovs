@@ -41,7 +41,7 @@ class AdminController extends Controller
     public function produk(Request $request)
     {
         $reqsearch = $request->get('search');  
-        $produkdb = Produk::leftJoin('kategori','produk.id_kategori','=','kategori.id')
+        $produkdb = Produk::leftJoin('kategori','produk.kategori_id','=','kategori.id')
             ->select('kategori.nama_kategori','produk.*')
             ->when($reqsearch, function($query, $reqsearch){
                 $search = '%'.$reqsearch.'%';
@@ -71,7 +71,7 @@ class AdminController extends Controller
     public function create_produk(Request $request)
     {
         $validator = \Validator::make($request->all(),[
-            "id_kategori"   => "required",
+            "kategori_id"   => "required",
             "gambar"        => "required|image|max:1024",
             "nama_produk"   => "required",
             "deskripsi"     => "required",
@@ -87,7 +87,7 @@ class AdminController extends Controller
             $image->move($destinationPath, $input['imagename']);
 
             Produk::insert([
-                'id_kategori'   => $request->get("id_kategori"),
+                'kategori_id'   => $request->get("kategori_id"),
                 'gambar'        => $input['imagename'],
                 'nama_produk'   => $request->get("nama_produk"),
                 'deskripsi'     => $request->get("deskripsi"),
@@ -105,7 +105,7 @@ class AdminController extends Controller
     {
         $validator = \Validator::make($request->all(),[
             "id"            => "required",
-            "id_kategori"   => "required",
+            "kategori_id"   => "required",
             "nama_produk"   => "required",
             "deskripsi"     => "required",
             "harga_jual"    => "required",
@@ -134,7 +134,7 @@ class AdminController extends Controller
             }
 
             $produkdb->update([
-                'id_kategori'   => $request->get("id_kategori"),
+                'kategori_id'   => $request->get("kategori_id"),
                 'gambar'        => $gambar,
                 'nama_produk'   => $request->get("nama_produk"),
                 'deskripsi'     => $request->get("deskripsi"),

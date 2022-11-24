@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="card card-rounded">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header text-white" style="background-color: #61678b">
                         <h5 class="card-title pt-2"> 
                             @if(!empty($request->get('id')))
                                 <i class="fas fa-edit me-1"></i>
@@ -43,7 +43,7 @@
                                     @enderror
                                 @endif
                             </div>
-                                <button type="submit" class="btn btn-primary mt-3 btn-md">Simpan</button>
+                                <button type="submit" class="btn mt-3 btn-md text-white" style="background-color: #61678b">Simpan</button>
                             @if(!empty($request->get('id')))
                                 <a href="{{ route('admin.kategori') }}" class="btn btn-danger mt-3">Kembali</a>
                             @endif
@@ -53,7 +53,7 @@
             </div>
             <div class="col-sm-8">
                 <div class="card card-rounded">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header text-white" style="background-color: #61678b">
                         <h5 class="card-title pt-2"> <i class="fas fa-database me-1"></i> Data Kategori</h5>
                     </div>
                     <div class="card-body">

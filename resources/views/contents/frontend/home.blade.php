@@ -39,7 +39,7 @@
                 @include('components.frontend.produk_list')
             </div>
             <!-- end product -->
-            <div class="official mt-3">
+            {{-- <div class="official mt-3">
                 <div class="row">
                     <div class="col-sm-7">
                         <div class="official-content">
@@ -51,6 +51,9 @@
                         <img src="{{ asset('assets/img/offline_store.jpeg') }}" class="img-fluid w-100">
                     </div>
                 </div>
+            </div> --}}
+            <div class="container">
+
             </div>
         </div>
     </div>

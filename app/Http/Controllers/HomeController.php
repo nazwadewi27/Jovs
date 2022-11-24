@@ -31,7 +31,7 @@ class HomeController extends Controller
     {
 
         $reqsearch = $request->get('search');  
-        $produkdb = Produk::leftJoin('kategori','produk.id_kategori','=','kategori.id')
+        $produkdb = Produk::leftJoin('kategori','produk.kategori_id','=','kategori.id')
                     ->select('kategori.nama_kategori','produk.*');
         $data = [
             'title'     => 'Jovs',
@@ -44,8 +44,8 @@ class HomeController extends Controller
     public function kategori(Request $request, $id)
     {
         $edit = Kategori::findOrFail($id);
-        $produkdb = Produk::leftJoin('kategori','produk.id_kategori','=','kategori.id')
-                    ->select('kategori.nama_kategori','produk.*')->where('produk.id_kategori', $id);
+        $produkdb = Produk::leftJoin('kategori','produk.kategori_id','=','kategori.id')
+                    ->select('kategori.nama_kategori','produk.*')->where('produk.kategori_id', $id);
         $data = [
             'title'     => $edit->nama_kategori,
             'kategori'  => Kategori::All(),
@@ -57,7 +57,7 @@ class HomeController extends Controller
     public function search(Request $request)
     {
         $reqsearch = $request->get('keyword');  
-        $produkdb = Produk::leftJoin('kategori','produk.id_kategori','=','kategori.id')
+        $produkdb = Produk::leftJoin('kategori','produk.kategori_id','=','kategori.id')
             ->select('kategori.nama_kategori','produk.*')
             ->when($reqsearch, function($query, $reqsearch){
                 $search = '%'.$reqsearch.'%';
@@ -76,7 +76,7 @@ class HomeController extends Controller
     public function produk(Request $request, $id)
     {
         $reqsearch = $request->get('keyword');  
-        $produkdb = Produk::leftJoin('kategori','produk.id_kategori','=','kategori.id')
+        $produkdb = Produk::leftJoin('kategori','produk.kategori_id','=','kategori.id')
             ->select('kategori.nama_kategori','produk.*')->where('produk.id', $id)->first();
 
         if(!$produkdb){ abort('404'); }

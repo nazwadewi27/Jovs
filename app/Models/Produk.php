@@ -11,10 +11,10 @@ class Produk extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $table = 'produk';
+    protected $table = 'produks';
     protected $dates = ['deleted_at'];
     protected $fillable = [
-        "id_kategori",
+        "kategori_id",
         "gambar",
         "nama_produk",
         "deskripsi",

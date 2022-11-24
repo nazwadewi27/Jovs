@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,13 +45,4 @@ Route::group(['middleware' => 'revalidate'], function() {
         Route::post('update', [App\Http\Controllers\AdminController::class, 'update_profil'])->name('admin.update_profil');
     });
     //
-    Route::get('/', function()
-    {
-        $pdo = DB::getPdo();
-        $sql = "select * from footer";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
-    
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    });
 });

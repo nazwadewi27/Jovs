@@ -7,12 +7,12 @@
     <div class="modal-body">
         <div class="form-group">
             <label for="">Kategori</label>
-            <select class="form-select" name="id_kategori" required>
+            <select class="form-select" name="kategori_id" required>
                 @foreach($kategori as $r)
-                <option value="{{ $r->id }}" {{ $edit->id_kategori == $r->id ? 'selected' : ''}}>{{ $r->nama_kategori }}</option>
+                <option value="{{ $r->id }}" {{ $edit->kategori_id == $r->id ? 'selected' : ''}}>{{ $r->nama_kategori }}</option>
                 @endforeach
             </select>
-            @error("id_kategori")
+            @error("kategori_id")
                 <span class="text-danger">{{ $message }}</span>
             @enderror
         </div>

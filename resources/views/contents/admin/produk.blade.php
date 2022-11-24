@@ -87,12 +87,12 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="">Kategori</label>
-                                <select class="form-select" name="id_kategori" required>
+                                <select class="form-select" name="kategori_id" required>
                                     @foreach($kategori as $r)
                                     <option value="{{ $r->id }}">{{ $r->nama_kategori }}</option>
                                     @endforeach
                                 </select>
-                                @error("id_kategori")
+                                @error("kategori_id")
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
