@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kategri;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
-class KategriController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class KategriController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kategri  $kategri
+     * @param  \App\Models\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function show(Kategri $kategri)
+    public function show(Kategori $kategori)
     {
         //
     }
@@ -52,10 +52,10 @@ class KategriController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kategri  $kategri
+     * @param  \App\Models\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kategri $kategri)
+    public function edit(Kategori $kategori)
     {
         //
     }
@@ -64,10 +64,10 @@ class KategriController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Kategri  $kategri
+     * @param  \App\Models\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kategri $kategri)
+    public function update(Request $request, Kategori $kategori)
     {
         //
     }
@@ -75,10 +75,10 @@ class KategriController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kategri  $kategri
+     * @param  \App\Models\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kategri $kategri)
+    public function destroy(Kategori $kategori)
     {
         //
     }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Kategori;
+use App\Models\User;
 use App\Models\Produk;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +16,13 @@ class DataSeeder extends Seeder
      */
     public function run()
     {
+
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('password')
+        ]);
+
         Kategori::create([
             'nama_kategori' => 'Hijab'
         ]);
@@ -36,7 +44,7 @@ class DataSeeder extends Seeder
         ]);
 
         Produk::create([
-            'kategori_id' => 1,
+            'kategoris_id' => 1,
             'gambar' => 'produk_135486525.jpg',
             'nama_produk' => 'Hijab Alila',
             'deskripsi' => 'Hijab berbahan lembut',

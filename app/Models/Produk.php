@@ -14,7 +14,7 @@ class Produk extends Model
     protected $table = 'produks';
     protected $dates = ['deleted_at'];
     protected $fillable = [
-        "kategori_id",
+        "kategoris_id",
         "gambar",
         "nama_produk",
         "deskripsi",
