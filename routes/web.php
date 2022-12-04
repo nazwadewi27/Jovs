@@ -42,5 +42,6 @@ Route::group(['middleware' => 'revalidate'], function() {
     Route::prefix('admin/profil')->group(function () {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'profil'])->name('admin.profil');
         Route::post('update', [App\Http\Controllers\AdminController::class, 'update_profil'])->name('admin.update_profil');
+        Route::post('store', [App\Http\Controller\FooterController::class, 'store'])->name('admin.footer');
     });
 });
