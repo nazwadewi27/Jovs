@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Kategori;
 use App\Models\Produk;
 use App\Models\User;
+use App\Models\Footer;
 
 class AdminController extends Controller
 {
@@ -227,7 +228,9 @@ class AdminController extends Controller
             'edit' => User::findOrFail(auth()->user()->id),
             'request' => $request
         ];
-        return view('contents.admin.profil', $data);
+
+        $footer = Footer::get();
+        return view('contents.admin.profil', $data, compact('footer'));
     }
 
     // data proses profil
@@ -262,4 +265,5 @@ class AdminController extends Controller
             return redirect()->back()->withErrors($validator)->with("failed"," Gagal Update Data ! ");
         }
     }
+    
 }
