@@ -67,6 +67,7 @@
         <!-- main -->
         @php 
             $profil = App\Models\User::where('id', 1)->first();
+            $footer = App\Models\Footer::where('id', 1)->first();
         @endphp
         <div class="clearfix pt-4" style="margin-top: 2rem;"></div>
         <div class="main">
@@ -78,8 +79,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 text-white">
-                        <h4 style="color: white">Butuh Bantuan</h4>
-                        <p class="pt-2 text-white">08:00 - 17:00 WIB / (Senin - Jumat)</p>
+                        <h4 style="color: white">{{ $footer->judul }}</h4>
+                        <p class="pt-2 text-white">{{ $footer->waktu_kerja }}</p>
                         <i class="fas fa-envelope-square me-2 text-white"></i> {{ $profil->email }}
                         <br>
                         <i class="fas fa-map-marker-alt me-2 text-white"></i> {{ $profil->address }}

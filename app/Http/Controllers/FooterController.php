@@ -25,8 +25,18 @@ class FooterController extends Controller
             'waktu_kerja' => $request->waktu_kerja,
             'media' => $request->media, 
         ]);
-        dd($footer);
+        // dd($footer);
         return redirect()->back()->with('status', 'Berhasil Add data');
+    }
+
+    public function update(Request $request, )
+    {
+        $footer = Footer::where('id', 1)->update([
+            'judul' => $request->judul,
+            'waktu_kerja' => $request->waktu_kerja,
+            'media' => $request->media, 
+        ]);
+        return redirect()->back()->with('status', 'Berhasil Edit data')->with($footer);
     }
 
     public function destroy(Request $request, $id)

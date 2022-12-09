@@ -108,34 +108,37 @@
                                     </button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Edit Footer</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form class="row g-3" action="{{ route('admin.footer.store') }}" method="POST">
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Edit Footer</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                    @foreach ($footer as $f)
+                                                    <form class="row g-3" action="{{ route('admin.footer.update') }}" method="POST">
+                                                        @csrf
+                                                        {{-- @method('PUT') --}}
                                                         <div class="col-md-6">
                                                           <label for="inputEmail4" class="form-label">Judul</label>
-                                                          <input type="text" class="form-control" id="inputEmail4" name="judul">
+                                                          <input type="text" class="form-control" id="inputEmail4" name="judul" value="{{ $f->judul }}">
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="inputEmail4" class="form-label">Jam Kerja</label>
-                                                            <input type="text" class="form-control" id="inputEmail4" name="waktu_kerja">
+                                                            <input type="text" class="form-control" id="inputEmail4" name="waktu_kerja" value="{{ $f->waktu_kerja }}">
                                                           </div>
                                                           <div class="col-md-6">
                                                             <label for="inputEmail4" class="form-label">Media</label>
-                                                            <input type="text" class="form-control" id="inputEmail4" name="judul">
+                                                            <input type="text" class="form-control" id="inputEmail4" name="media" value="{{ $f->media }}">
                                                           </div>
                                                         <div class="col-12">
                                                           <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" id="gridCheck">
                                                             <label class="form-check-label" for="gridCheck">
-                                                              Check me out
+                                                                Check me out
                                                             </label>
-                                                          </div>
                                                         </div>
+                                                    </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
@@ -143,6 +146,7 @@
                                                         <button type="submit" class="btn btn-primary">Save changes</button>
                                                     </div>
                                                 </div>
+                                                @endforeach
                                             </form>
                                         </div>
                                     </div>

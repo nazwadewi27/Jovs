@@ -15,9 +15,9 @@ class CreateFootersTable extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('waktu_kerja');
-            $table->string('media');
+            $table->string('judul')->nullable();
+            $table->string('waktu_kerja')->nullable();
+            $table->string('media')->nullable();
             $table->timestamps();
         });
     }

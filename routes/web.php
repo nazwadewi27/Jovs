@@ -44,5 +44,6 @@ Route::group(['middleware' => 'revalidate'], function() {
         Route::post('update', [App\Http\Controllers\AdminController::class, 'update_profil'])->name('admin.update_profil');
         Route::post('store', [App\Http\Controllers\AdminController::class, 'store'])->name('admin.footer');
         Route::post('store', [App\Http\Controllers\FooterController::class, 'store'])->name('admin.footer.store');
+        Route::post('put', [App\Http\Controllers\FooterController::class, 'update'])->name('admin.footer.update'); 
     });
 });

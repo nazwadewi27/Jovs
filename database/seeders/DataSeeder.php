@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Kategori;
 use App\Models\User;
 use App\Models\Produk;
+use App\Models\Footer;
 use Illuminate\Database\Seeder;
 
 class DataSeeder extends Seeder
@@ -49,6 +50,12 @@ class DataSeeder extends Seeder
             'nama_produk' => 'Hijab Alila',
             'deskripsi' => 'Hijab berbahan lembut',
             'harga_jual' => '100000',
+        ]);
+
+        Footer::create([
+            'judul' => 'Affh iyh?',
+            'waktu_kerja' => 'kapan yh? ska2 ak',
+            'media' => 'igeh'
         ]);
     }
 }
