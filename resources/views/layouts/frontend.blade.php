@@ -22,7 +22,7 @@
         <!-- navbar -->
         <nav class="navbar navbar-expand-md navbar-custom shadow-sm fixed-top py-0">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}"><b>{{ config('app.name') }}</b></a>
+                <a class="navbar-brand" href="{{ url('/') }}"><b>Jovs</b></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon text-dark pt-2"><i class="fas fa-bars"></i></span>
                 </button>
@@ -89,7 +89,7 @@
                     <div class="col-sm-4">
                         <h4>Tetap Terhubung Dengan Kami</h4>
                         <a href="#" class="text-terhubung text-white"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-terhubung text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-terhubung text-white"><i class="fab fa-instagram"> </i></a>
                         <a href="#" class="text-terhubung text-white"><i class="fab fa-news"></i></a>
                     </div>
                 </div>
